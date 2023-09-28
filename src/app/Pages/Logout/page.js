@@ -3,7 +3,7 @@ import AdminNavComponent from "@/AdminComponents/AdminNavbarComponent";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function page() {
+export default function Page() {
   const navigate = useRouter();
   const Logout = () => {
     localStorage.removeItem("userData");
