@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function BlogCard(props) {
@@ -5,7 +6,7 @@ export default function BlogCard(props) {
     <div>
       <a href={props.link}>
         <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-          <img
+          <Image
             alt="Office"
             src={props.image}
             class="absolute inset-0 h-full w-full object-cover"

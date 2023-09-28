@@ -4,13 +4,14 @@ import Link from "next/link";
 import axios from "axios";
 import lottieJson from "../Assets/animation_lkjfxofn.json";
 import Lottie from "react-lottie-player";
+import Image from "next/image";
 
 export default function ProjectComponent() {
   const [project, setproject] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get("https://parseapi.back4app.com/classes/Projects", {
         headers: {
           "X-Parse-Application-Id": process.env.NEXT_PUBLIC_APP_ID,
@@ -57,8 +58,8 @@ export default function ProjectComponent() {
               {project
                 .map((frogress) => {
                   return (
-                    <div class="w-full lg:w-1/3 p-3">
-                      <img
+                    <div class="w-full lg:w-1/3 p-3" key={frogress.id}>
+                      <Image
                         class="w-full h-72 rounded-lg object-cover object-top"
                         src={frogress.image.url}
                         alt=""

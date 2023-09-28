@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function NavComponent() {
@@ -9,7 +10,11 @@ export default function NavComponent() {
             <div class="flex items-center justify-between h-16">
               <div class="w-full justify-between flex items-center">
                 <a class="flex-shrink-0" href="/">
-                  <img class="w-8 h-8" src="/icons/rocket.svg" alt="Workflow" />
+                  <Image
+                    class="w-8 h-8"
+                    src="/icons/rocket.svg"
+                    alt="Workflow"
+                  />
                 </a>
                 <div class="hidden md:block">
                   <div class="flex items-baseline ml-10 space-x-4">

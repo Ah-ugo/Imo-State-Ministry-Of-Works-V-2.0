@@ -3,16 +3,16 @@ import AdminNavComponent from "@/AdminComponents/AdminNavbarComponent";
 import FooterSection from "@/Components/FooterSection";
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Parse from "parse/dist/parse.min.js";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../../Assets/animation_lkjfxofn.json";
 
 export default function page() {
-  const [title, setTitle] = React.useState();
-  const [paragraph1, setParagraph1] = React.useState();
-  const [image1, setImage1] = React.useState();
-  const [loading, setLoading] = React.useState(false);
+  const [title, setTitle] = useState();
+  const [paragraph1, setParagraph1] = useState();
+  const [image1, setImage1] = useState();
+  const [loading, setLoading] = useState(false);
   const navigate = useRouter();
 
   console.log(image1 + "hdhdhdh");
@@ -57,7 +57,7 @@ export default function page() {
         // Handle error, e.g., display an error message to the user.
       });
   };
-  React.useEffect(() => {
+  useEffect(() => {
     if (!localStorage.getItem("userData")) {
       navigate.replace("/Pages/Admin");
     } else {

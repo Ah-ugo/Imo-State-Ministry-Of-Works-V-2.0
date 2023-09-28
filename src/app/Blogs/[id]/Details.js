@@ -5,6 +5,7 @@ import NavComponent2 from "../../../Components/NavComponent2";
 import FooterSection from "../../../Components/FooterSection";
 import lottieJson from "../../../../public/animation_lkjfxofn.json";
 import Lottie from "react-lottie-player";
+import Image from "next/image";
 
 function BlogDetail({ params }) {
   const [blog, setBlog] = useState({});
@@ -45,12 +46,11 @@ function BlogDetail({ params }) {
             <p className="text-lg text-gray-800">{blog.paragraph1}</p>
 
             <figure>
-              <img
+              <Image
                 className="w-full object-cover rounded-xl"
                 src={blog.image1 && blog.image1.url}
                 alt="Image Description"
               />
-
               <figcaption className="mt-3 text-sm text-center text-gray-500">
                 {blog.image1Caption}
               </figcaption>
@@ -68,7 +68,7 @@ function BlogDetail({ params }) {
             </blockquote>
 
             <figure>
-              <img
+              <Image
                 className="w-full object-cover rounded-xl"
                 src={blog.image2 && blog.image2.url}
                 alt="Image Description"
