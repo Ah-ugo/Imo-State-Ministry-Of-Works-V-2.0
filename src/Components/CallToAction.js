@@ -13,8 +13,8 @@ export default function CallToAction() {
         <div class="w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
           <h2 class="text-3xl font-extrabold text-green-700 sm:text-4xl">
             <span class="block">
-              Building Imo State's Tomorrow: Pioneering Progress, Connecting
-              Communities!
+              Building Imo State &apos; s Tomorrow: Pioneering Progress,
+              Connecting Communities!
             </span>
           </h2>
           <p class="text-md mt-4 text-gray-400">

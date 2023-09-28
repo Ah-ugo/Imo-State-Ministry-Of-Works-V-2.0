@@ -107,7 +107,7 @@ export default function AddBlog() {
     } else {
       navigate.replace("/Pages/AddBlog");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <AdminNavComponent />

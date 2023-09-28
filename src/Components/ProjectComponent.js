@@ -10,8 +10,8 @@ export default function ProjectComponent() {
   const [project, setproject] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(async () => {
-    await axios
+  const ViewData = () => {
+    axios
       .get("https://parseapi.back4app.com/classes/Projects", {
         headers: {
           "X-Parse-Application-Id": process.env.NEXT_PUBLIC_APP_ID,
@@ -26,6 +26,10 @@ export default function ProjectComponent() {
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
+  };
+
+  useEffect(() => {
+    ViewData();
   }, []);
   return (
     <div>

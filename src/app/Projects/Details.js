@@ -15,7 +15,7 @@ const Details = () => {
   const handleProject = (category) => {
     setShowCard(category);
   };
-  useEffect(async () => {
+  const ViewData = async () => {
     await axios
       .get("https://parseapi.back4app.com/classes/Projects", {
         headers: {
@@ -31,6 +31,9 @@ const Details = () => {
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
+  };
+  useEffect(() => {
+    ViewData();
   }, []);
 
   return (
@@ -52,11 +55,11 @@ const Details = () => {
                 </h2>
                 <p className="text-base text-body-color">
                   Explore our diverse range of recent projects that showcase our
-                  commitment to transforming Imo State's infrastructure. From
-                  roads and bridges to public transport and sustainable urban
-                  planning, we are dedicated to creating a better,
-                  well-connected future for all residents. Together, let's shape
-                  a progressive Imo State for generations to come.
+                  commitment to transforming Imo State &apos;s infrastructure.
+                  From roads and bridges to public transport and sustainable
+                  urban planning, we are dedicated to creating a better,
+                  well-connected future for all residents. Together, let &apos;s
+                  shape a progressive Imo State for generations to come.
                 </p>
               </div>
             </div>

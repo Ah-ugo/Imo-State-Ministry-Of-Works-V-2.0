@@ -8,7 +8,7 @@ import Parse from "parse/dist/parse.min.js";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../../Assets/animation_lkjfxofn.json";
 
-export default function page() {
+export default function Page() {
   const [title, setTitle] = useState();
   const [paragraph1, setParagraph1] = useState();
   const [image1, setImage1] = useState();
@@ -63,7 +63,7 @@ export default function page() {
     } else {
       navigate.replace("/Pages/AddProjects");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <AdminNavComponent />

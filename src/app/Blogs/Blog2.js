@@ -11,10 +11,10 @@ function Blog2() {
   const [blogs, setBlogs] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(async () => {
+  const ViewData = () => {
     // Replace YOUR_PARSE_APP_ID and YOUR_PARSE_REST_API_KEY with your Back4App credentials
     const url = "https://parseapi.back4app.com/classes/BlogPost";
-    await axios
+    axios
       .get(url, {
         headers: {
           "X-Parse-Application-Id": process.env.NEXT_PUBLIC_APP_ID,
@@ -29,6 +29,10 @@ function Blog2() {
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
+  };
+
+  useEffect(() => {
+    ViewData();
   }, []);
 
   return (
