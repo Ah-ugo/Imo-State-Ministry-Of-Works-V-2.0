@@ -7,27 +7,6 @@ import Parse from "parse/dist/parse.min.js";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../../Assets/animation_lkjfxofn.json";
 
-export async function getServerSideProps({ req }) {
-  const user = localStorage.getItem("userData");
-
-  if (!user) {
-    // Redirect the user to the login page
-    return {
-      redirect: {
-        destination: "/Pages/Admin",
-        permanent: false,
-      },
-    };
-  }
-
-  // Return the props that you want to pass to the page
-  return {
-    props: {
-      user,
-    },
-  };
-}
-
 export default function AddBlog() {
   const [title, setTitle] = useState();
   const [paragraph1, setParagraph1] = useState();
