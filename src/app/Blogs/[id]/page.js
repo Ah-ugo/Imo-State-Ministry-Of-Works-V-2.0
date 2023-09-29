@@ -31,6 +31,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   return fetchBlog().then((blogData) => {
     return {
+      ...parent,
       link: [
         {
           rel: "icon",
@@ -49,7 +50,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         // url: blogData.url,
       },
       twitter: {
-        card: blogData.image1 && blogData.image1.url,
+        card: "summary_large_image",
         title: blogData.title,
         description: blogData.content,
         image: blogData.image1 && blogData.image1.url,
