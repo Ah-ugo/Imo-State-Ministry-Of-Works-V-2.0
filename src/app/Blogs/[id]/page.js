@@ -76,6 +76,13 @@ export default function page({ params }) {
     console.log(blogData.title + "nnnnnn");
     return (
       <div>
+        <Head>
+          <meta property="og:title" content={blogData.title} />
+          <meta
+            property="og:image"
+            content={blogData.image1 && blogData.image1.url}
+          />
+        </Head>
         <BlogDetail params={params} />
       </div>
     );
