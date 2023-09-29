@@ -63,7 +63,7 @@ export default function ProjectComponent() {
                 .map((frogress) => {
                   return (
                     <div class="w-full lg:w-1/3 p-3" key={frogress.id}>
-                      <Image
+                      <img
                         class="w-full h-72 rounded-lg object-cover object-top"
                         src={frogress.image.url}
                         alt=""

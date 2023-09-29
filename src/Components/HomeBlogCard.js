@@ -12,7 +12,7 @@ export default function HomeBlogCard(props) {
       <p className="group rounded-xl overflow-hidden" href="#">
         <div className="sm:flex">
           <div className="flex-shrink-0 rounded-xl overflow-hidden w-full sm:w-56 h-44">
-            <Image
+            <img
               className="group-hover:scale-105 transition-transform duration-500 ease-in-out w-full h-full object-cover rounded-xl"
               src={props.img}
               alt="Image Description"

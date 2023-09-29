@@ -120,7 +120,7 @@ const PortfolioCard = ({
         }`}>
         <div className="mb-12">
           <div className="overflow-hidden rounded-lg">
-            <Image src={ImageHref} alt="portfolio" className="w-full" />
+            <img src={ImageHref} alt="portfolio" className="w-full" />
           </div>
           <div className="relative z-10 px-3 -mt-20 text-center bg-white rounded-lg shadow-lg mx-7 py-9">
             <span className="block mb-2 text-sm font-semibold text-primary">

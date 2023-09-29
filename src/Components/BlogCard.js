@@ -6,7 +6,7 @@ export default function BlogCard(props) {
     <div>
       <a href={props.link}>
         <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-          <Image
+          <img
             alt="Office"
             src={props.image}
             class="absolute inset-0 h-full w-full object-cover"
