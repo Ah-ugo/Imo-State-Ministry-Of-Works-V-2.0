@@ -46,7 +46,7 @@ function BlogDetail({ params }) {
             <p className="text-lg text-gray-800">{blog.paragraph1}</p>
 
             <figure>
-              <Image
+              <img
                 className="w-full object-cover rounded-xl"
                 src={blog.image1 && blog.image1.url}
                 alt="Image Description"
@@ -68,7 +68,7 @@ function BlogDetail({ params }) {
             </blockquote>
 
             <figure>
-              <Image
+              <img
                 className="w-full object-cover rounded-xl"
                 src={blog.image2 && blog.image2.url}
                 alt="Image Description"
