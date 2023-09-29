@@ -47,8 +47,8 @@ export default function CallToAction() {
         <div class="flex items-center gap-8 p-8 lg:p-24">
           <Image src={sirNwosu} class="w-1/2 rounded-lg lg:w-full" alt="Tree" />
           <div>
-            <Image src={sirNwosu2} class="mb-8 rounded-lg" alt="Tree" />
-            <Image src={sirNwosu3} class="rounded-lg" alt="Tree" />
+            <Image src={sirNwosu2} class="mb-8 rounded-lg w-auto" alt="Tree" />
+            <Image src={sirNwosu3} class="rounded-lg w-auto" alt="Tree" />
           </div>
         </div>
       </div>
