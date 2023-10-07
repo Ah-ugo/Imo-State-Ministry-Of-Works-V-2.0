@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+##Imo State Ministry Of Works
+
+This is the official website for the Imo State Ministry Of Works, built with Next.js and Tailwind CSS. It is a full-stack project with the following features:
+
+Blog section: Create, edit, and publish blog posts.
+Project section: Showcase the ministry's projects and progress.
+Admin section: Add and manage blog posts and projects.
 
 ## Getting Started
 
