@@ -45,7 +45,7 @@ function Blog2() {
               Read From Our Blog
             </p>
             <p class="text-2xl font-light text-gray-400">
-              All article are verified by 2 experts and valdiate by the CTO
+              All article are verified by 2 experts and validate by the CTO
             </p>
           </div>
           {/* <div class="text-end">
