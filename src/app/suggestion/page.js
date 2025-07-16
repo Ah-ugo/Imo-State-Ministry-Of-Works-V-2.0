@@ -1,5 +1,4 @@
 /** @format */
-
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -180,7 +179,7 @@ export default function SuggestionBox() {
                     className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent'
                   >
                     <option value='General'>General Suggestion</option>
-                    <option value='Roads'>Roads & Infrastructure</option>
+                    <option value='Roads'>Roads &amp; Infrastructure</option>
                     <option value='Services'>Public Services</option>
                     <option value='Policy'>Policy Improvement</option>
                     <option value='Other'>Other</option>
@@ -255,7 +254,7 @@ export default function SuggestionBox() {
                   <li>
                     Suggestions should be constructive and solution-oriented
                   </li>
-                  <li>Be specific about the area you're addressing</li>
+                  <li>Be specific about the area you&apos;re addressing</li>
                   <li>
                     Provide as much detail as possible about your proposed
                     solution

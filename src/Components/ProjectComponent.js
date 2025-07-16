@@ -1,5 +1,4 @@
 /** @format */
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -65,7 +64,8 @@ export default function ProjectComponent() {
             Our Infrastructure Projects
           </h2>
           <p className='text-lg text-green-100 max-w-3xl mx-auto'>
-            Discover the latest developments transforming Imo State's landscape
+            Discover the latest developments transforming Imo State&apos;s
+            landscape
           </p>
         </motion.div>
 
@@ -113,9 +113,12 @@ export default function ProjectComponent() {
                         'Infrastructure development project'}
                     </p>
                     <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
-                      <button className='px-4 py-2 bg-white text-green-700 font-medium rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300'>
+                      <Link
+                        href={`/Projects/${projectItem.objectId}`}
+                        className='px-4 py-2 bg-white text-green-700 font-medium rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300'
+                      >
                         View Details
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>

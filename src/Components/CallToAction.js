@@ -1,5 +1,4 @@
 /** @format */
-
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -7,12 +6,6 @@ import sirNwosu from '../../public/sirNwosu.jpg';
 import sirNwosu2 from '../../public/sirNwosu2.jpg';
 import sirNwosu3 from '../../public/sirNwosu3.jpg';
 import Image from 'next/image';
-
-// Explicitly import the specific motion components you need
-const MotionDiv = motion.div;
-const MotionH2 = motion.h2;
-const MotionP = motion.p;
-const MotionA = motion.a;
 
 export default function CallToAction() {
   // Animation variants
@@ -82,7 +75,7 @@ export default function CallToAction() {
       </div>
 
       <div className='max-w-7xl mx-auto px-6 py-16 lg:py-24 relative z-10'>
-        <MotionDiv
+        <motion.div
           className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'
           initial='hidden'
           whileInView='visible'
@@ -90,30 +83,30 @@ export default function CallToAction() {
           variants={containerVariants}
         >
           <div className='order-2 lg:order-1'>
-            <MotionH2
+            <motion.h2
               className='text-3xl md:text-4xl lg:text-5xl font-bold text-green-700 mb-6 leading-tight'
               variants={itemVariants}
             >
-              Building Imo State's Future:{' '}
+              Building Imo State&apos;s Future:{' '}
               <span className='text-gray-800 block mt-2'>
                 Sustainable Progress, Connected Communities
               </span>
-            </MotionH2>
+            </motion.h2>
 
-            <MotionP
+            <motion.p
               className='text-lg text-gray-600 mb-8 leading-relaxed'
               variants={itemVariants}
             >
               Welcome to the official website of the Imo State Ministry of
-              Works. As the cornerstone of infrastructure development, we're
-              committed to creating a vibrant and sustainable future for our
-              beloved state. Through innovation, expertise, and unwavering
-              dedication, we're building the pathways that connect our
-              communities and turn visions into reality.
-            </MotionP>
+              Works. As the cornerstone of infrastructure development,
+              we&apos;re committed to creating a vibrant and sustainable future
+              for our beloved state. Through innovation, expertise, and
+              unwavering dedication, we&apos;re building the pathways that
+              connect our communities and turn visions into reality.
+            </motion.p>
 
-            <MotionDiv className='mt-8' variants={itemVariants}>
-              <MotionA
+            <motion.div className='mt-8' variants={itemVariants}>
+              <motion.a
                 href='/About'
                 className='inline-flex items-center px-8 py-4 text-lg font-medium rounded-full text-white relative overflow-hidden'
                 variants={buttonVariants}
@@ -123,13 +116,13 @@ export default function CallToAction() {
               >
                 <span className='relative z-10'>Learn About Our Mission</span>
                 <span className='absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-transparent'></span>
-              </MotionA>
-            </MotionDiv>
+              </motion.a>
+            </motion.div>
           </div>
 
           <div className='order-1 lg:order-2'>
             <div className='grid grid-cols-2 gap-4 sm:gap-6'>
-              <MotionDiv
+              <motion.div
                 className='relative h-64 sm:h-80 rounded-2xl overflow-hidden'
                 variants={imageVariants}
                 whileHover='hover'
@@ -137,15 +130,16 @@ export default function CallToAction() {
                 <Image
                   src={sirNwosu}
                   alt='Commissioner at work'
-                  className='absolute inset-0 w-full h-full object-cover'
                   fill
+                  className='absolute inset-0 w-full h-full object-cover'
                   priority
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
-              </MotionDiv>
+              </motion.div>
 
               <div className='space-y-4 sm:space-y-6'>
-                <MotionDiv
+                <motion.div
                   className='relative h-28 sm:h-36 rounded-2xl overflow-hidden'
                   variants={imageVariants}
                   transition={{ delay: 0.2 }}
@@ -154,13 +148,14 @@ export default function CallToAction() {
                   <Image
                     src={sirNwosu2}
                     alt='Project site visit'
-                    className='absolute inset-0 w-full h-full object-cover'
                     fill
+                    className='absolute inset-0 w-full h-full object-cover'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
-                </MotionDiv>
+                </motion.div>
 
-                <MotionDiv
+                <motion.div
                   className='relative h-28 sm:h-36 rounded-2xl overflow-hidden'
                   variants={imageVariants}
                   transition={{ delay: 0.4 }}
@@ -169,15 +164,16 @@ export default function CallToAction() {
                   <Image
                     src={sirNwosu3}
                     alt='Infrastructure development'
-                    className='absolute inset-0 w-full h-full object-cover'
                     fill
+                    className='absolute inset-0 w-full h-full object-cover'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
-                </MotionDiv>
+                </motion.div>
               </div>
             </div>
           </div>
-        </MotionDiv>
+        </motion.div>
       </div>
     </div>
   );
