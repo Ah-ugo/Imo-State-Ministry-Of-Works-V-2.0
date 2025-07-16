@@ -100,7 +100,7 @@ export default function ContactPage() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className='text-xl max-w-2xl mx-auto'
             >
-              We're here to help and answer any questions you may have
+              We&apos;re here to help and answer any questions you may have
             </motion.p>
           </div>
         </section>
@@ -123,7 +123,7 @@ export default function ContactPage() {
 
                 {submitStatus === 'success' && (
                   <div className='mb-6 p-4 bg-green-100 text-green-700 rounded-lg'>
-                    Thank you for your message! We'll get back to you soon.
+                    Thank you for your message! We&apos;ll get back to you soon.
                   </div>
                 )}
 

@@ -18,26 +18,26 @@ function BlogDetail({ params }) {
   const [loaded, setLoaded] = useState(false);
   const router = useRouter();
 
-  const fetchBlog = async () => {
-    try {
-      const url = `https://parseapi.back4app.com/classes/BlogPost/${params.id}`;
-      const response = await axios.get(url, {
-        headers: {
-          'X-Parse-Application-Id': process.env.NEXT_PUBLIC_APP_ID,
-          'X-Parse-REST-API-Key': process.env.NEXT_PUBLIC_REST_KEY,
-        },
-      });
-      setBlog(response.data);
-      setLoaded(true);
-    } catch (error) {
-      console.error('Error fetching blog:', error);
-      router.push('/Blogs');
-    }
-  };
-
   useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const url = `https://parseapi.back4app.com/classes/BlogPost/${params.id}`;
+        const response = await axios.get(url, {
+          headers: {
+            'X-Parse-Application-Id': process.env.NEXT_PUBLIC_APP_ID,
+            'X-Parse-REST-API-Key': process.env.NEXT_PUBLIC_REST_KEY,
+          },
+        });
+        setBlog(response.data);
+        setLoaded(true);
+      } catch (error) {
+        console.error('Error fetching blog:', error);
+        router.push('/Blogs');
+      }
+    };
+
     fetchBlog();
-  }, [params.id]);
+  }, [params.id, router]);
 
   if (!loaded) {
     return (
@@ -192,7 +192,7 @@ function BlogDetail({ params }) {
                 <p className='text-xl'>{blog.quote}</p>
                 {blog.quoteAuthor && (
                   <footer className='mt-2 text-gray-500'>
-                    — {blog.quoteAuthor}
+                    &mdash; {blog.quoteAuthor}
                   </footer>
                 )}
               </motion.blockquote>
@@ -255,18 +255,6 @@ function BlogDetail({ params }) {
             )}
           </div>
         </motion.section>
-
-        {/* Related Articles (optional) */}
-        {/* <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedArticles.map(article => (
-                <ArticleCard key={article.id} article={article} />
-              ))}
-            </div>
-          </div>
-        </section> */}
       </main>
 
       <FooterSection />
