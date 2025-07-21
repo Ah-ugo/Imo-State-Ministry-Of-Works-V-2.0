@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['parsefiles.back4app.com'],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['mongoose'],
+  },
 };
 
 module.exports = nextConfig;
